@@ -6,7 +6,7 @@ export default function Search() {
     const [text, setText] = useState("");
 
     function handleSubmit(event) {
-        event.preventDefault;
+        event.preventDefault();
         if (city.length > 0) {
             setText(`It is currently 27°C in ${city}`);
         } else {
