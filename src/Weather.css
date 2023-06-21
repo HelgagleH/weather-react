@@ -1,0 +1,202 @@
+.Weather {
+    margin: 90px auto;
+    max-width: 800px;
+    border: 6px solid #def1f1;
+    border-radius: 125px;
+    padding: 50px;
+    background-color: #55b3d686;
+}
+
+.input-field {
+    border: none;
+    border-bottom: 2px solid #000000;
+    margin-right: 5px;
+    width: 335px;
+}
+
+button {
+    color: #e6e8ee;
+    text-decoration: none;
+    background: #d85420;
+    font-size: 15px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 16px;
+    box-shadow: 4px 2px 10px rgba(0, 0, 0, 0.3);
+    transition: all 200ms ease-in-out;
+}
+
+button:hover {
+    color: #f06432;
+    background: #395678;
+    cursor: pointer;
+}
+
+.form-enter {
+    display: flex;
+    justify-content: center;
+}
+
+.middle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0 20px 0;
+}
+
+.today-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+.tomorrow-wrapper {
+    width: 20%;
+}
+
+.today-left {
+    padding-right: 25px;
+    align-items: center;
+}
+
+.today-city p {
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.today-right {
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.empty {
+    width: 60px;
+}
+
+.today-icon-wrap {
+    padding: 4px 18px;
+}
+
+.icon-today {
+    width: 85px;
+    display: block;
+    margin: 0 auto;
+}
+
+#current-city {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 40px;
+    margin: 0px;
+    color: #272e3e;
+}
+
+.today-date p,
+#current-date {
+    font-size: 15px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.today-weather {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+#current-date {
+    line-height: 42px;
+    margin: 0;
+}
+
+.today-weather p,
+.today-weather-value {
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.today-weather-value {
+    padding-left: 28px;
+    line-height: 60px;
+    color: #ffffff;
+}
+
+.units {
+    position: relative;
+    top: -12px;
+    font-size: 18px;
+    color: #272e3e;
+    font-weight: 700;
+}
+
+.today-weather-description {
+    font-size: 15px;
+    text-align: center;
+    color: #395678;
+    font-weight: 500;
+}
+
+#description {
+    margin: 0;
+}
+
+#description::first-letter {
+    text-transform: capitalize;
+}
+
+.weather-values ul {
+    margin: 0;
+    line-height: 21px;
+}
+
+.weather-values li {
+    list-style: none;
+    margin-left: -30px;
+    font-size: 14px;
+    color: #395678;
+    font-weight: 500;
+}
+
+.row {
+    margin-top: 50px;
+}
+
+.other-days {
+    font-size: 14px;
+    color: #272e3e;
+    font-weight: 600;
+}
+
+.weather-forecast-temperatures {
+    font-size: 12px;
+}
+
+.today-weather .active {
+    color: #000000;
+    cursor: default;
+}
+
+.today-weather .active:hover {
+    text-decoration: none;
+}
+
+.bottom-link {
+    text-align: center;
+    position: relative;
+    bottom: 68px;
+    font-size: 13px;
+}
+
+.bottom-link a {
+    color: #d85420;
+    font-weight: 500;
+}
+
+.text-message {
+    font-size: 24px;
+}
