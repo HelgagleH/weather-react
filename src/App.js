@@ -7,7 +7,7 @@ function App() {
       <Weather />
       <div className="bottom-link">
         <a
-          href="https://github.com/HelgagleH/first-repository"
+          href="https://github.com/HelgagleH/weather-react"
           target="_blank"
           rel="noreferrer"
         >
