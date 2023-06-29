@@ -1,55 +1,67 @@
-import React from "react";
+// import React from "react";
+// import "./Weather.css";
+// import Search from "./Search";
+
+import React, { useState } from "react";
+import WeatherInfo from "./WeatherInfo";
+import axios from "axios";
 import "./Weather.css";
-import Search from "./Search";
 
-export default function Weather() {
-    return (
-        <div className="Weather">
-            <Search />
-            <div className="middle">
-                <div className="today-wrapper">
-                    <div className="today">
-                        <div className="today-left">
-                            <div className="today-city">
-                                <p>Thessaloniki</p>
-                            </div>
-                            <div className="today-icon">
-                                <div className="d-flex today-icon-wrap">
-                                    <img
-                                        src="https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png"
-                                        alt="Weather img"
-                                        className="icon-today"
-                                    />
-                                </div>
-                            </div>
-                            <div className="today-weather-description">
-                                <p>Clear</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="today-right">
-                        <div className="today-left-wrapper">
-                            <div className="today-city"></div>
-                            <div className="today-date">
-                                <p>SUN 4.06 / 00:52</p>
-                            </div>
-                            <div className="today-weather">
-                                <span className="today-weather-value">18</span>
-                                <span className="units">°C</span>
-                            </div>
-                            <div className="weather-values">
-                                <ul>
-                                    <li className="humidity-value">Humidity: 50 %</li>
-                                    <li className="wind-value">Wind: 1 km/h</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="empty"></div>
+export default function Weather(props) {
+    const [weatherData, setWeatherData] = useState({ ready: false });
+    const [city, setCity] = useState(props.defaultCity);
+
+    function handleResponse(response) {
+        setWeatherData({
+            ready: true,
+            coordinates: response.data.coord,
+            temperature: response.data.main.temp,
+            humidity: response.data.main.humidity,
+            date: new Date(response.data.dt * 1000),
+            description: response.data.weather[0].description,
+            icon: response.data.weather[0].icon,
+            wind: response.data.wind.speed,
+            city: response.data.name,
+        });
+    }
+
+    function handleSubmit(event) {
+        event.preventDefault();
+        search();
+    }
+
+    function handleCityChange(event) {
+        setCity(event.target.value);
+    }
+
+    function search() {
+        const apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+        let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+        axios.get(apiUrl).then(handleResponse);
+    }
+
+    if (weatherData.ready) {
+        return (
+            <div className="form-enter">
+                <form onSubmit={handleSubmit}>
+                    <input
+                        type="text"
+                        placeholder="Enter a city"
+                        className="input-field"
+                        autoFocus="on"
+                        onChange={handleCityChange}
+                    />
+                    <button
+                        type="submit"
+                        value="Search"
+                        className="btn btn-primary w-100"
+                    />
+                </form>
+                <WeatherInfo data={weatherData} />
             </div>
-
-            <div className="container"></div>
-        </div>
-    );
+        );
+    } else {
+        search();
+        return "Loading...";
+    }
 }
