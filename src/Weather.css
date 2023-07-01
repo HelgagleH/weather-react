@@ -5,6 +5,7 @@
     border-radius: 125px;
     padding: 50px;
     background-color: #55b3d686;
+    text-align: center;
 }
 
 .input-field {
@@ -12,6 +13,8 @@
     border-bottom: 2px solid #000000;
     margin-right: 5px;
     width: 335px;
+    line-height: 25px;
+    font-size: 15px;
 }
 
 button {
@@ -34,7 +37,6 @@ button:hover {
 }
 
 .form-enter {
-    /* display: flex; */
     justify-content: center;
 }
 
@@ -48,6 +50,7 @@ button:hover {
 .today-wrapper {
     display: flex;
     justify-content: center;
+    gap: 40px;
     width: 50%;
 }
 
@@ -60,11 +63,12 @@ button:hover {
     align-items: center;
 }
 
-.today-city p {
-    font-size: 22px;
+.today-city {
+    font-size: 20px;
     font-weight: 600;
     text-align: center;
     margin-bottom: 10px;
+    color: #272E3E;
 }
 
 .today-right {
@@ -87,41 +91,36 @@ button:hover {
     margin: 0 auto;
 }
 
-#current-city {
-    font-size: 20px;
-    font-weight: 600;
-    text-align: center;
-    line-height: 40px;
-    margin: 0px;
-    color: #272e3e;
+.today-icon-wrap canvas {
+    color: #d85420;
 }
 
-.today-date p,
-#current-date {
+
+.today-date {
     font-size: 15px;
     text-align: center;
     font-weight: 500;
 }
 
 .today-weather {
-    margin: 0;
+    margin: 20px 0;
     padding: 0;
-    line-height: 1;
-}
-
-#current-date {
-    line-height: 42px;
-    margin: 0;
+    align-items: center;
 }
 
 .today-weather p,
 .today-weather-value {
     font-size: 35px;
     font-weight: 700;
+    padding: 0;
+}
+
+.today-weather {
+    text-align: center;
 }
 
 .today-weather-value {
-    padding-left: 28px;
+    text-align: center;
     line-height: 60px;
     color: #ffffff;
 }
@@ -139,13 +138,6 @@ button:hover {
     text-align: center;
     color: #395678;
     font-weight: 500;
-}
-
-#description {
-    margin: 0;
-}
-
-#description::first-letter {
     text-transform: capitalize;
 }
 

@@ -52,11 +52,11 @@ export default function WeatherInfo(props) {
                             </div>
                             <div className="today-icon">
                                 <div className="d-flex today-icon-wrap">
-                                    <img
+                                    {/* <img
                                         src="https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png"
                                         alt="Weather img"
                                         className="icon-today"
-                                    />
+                                    /> */}
                                     <WeatherIcon code={props.data.icon} size={52} />
                                 </div>
                             </div>
@@ -70,16 +70,15 @@ export default function WeatherInfo(props) {
                             <div className="today-city"></div>
                             <div className="today-date">
                                 <FormattedDate date={props.data.date} />
-                                <p>SUN 4.06 / 00:52</p>
                             </div>
-                            <div className="today-weather">
+                            <div className="today-weather col">
                                 <span className="today-weather-value"><WeatherTemperature celsius={props.data.temperature} /></span>
-                                <span className="units">°C</span>
+                                <span className="units"></span>
                             </div>
                             <div className="weather-values">
                                 <ul>
                                     <li className="humidity-value">Humidity: {props.data.humidity}%</li>
-                                    <li className="wind-value">Wind: {props.data.wind} km/h</li>
+                                    <li className="wind-value">Wind: {Math.round(props.data.wind)} km/h</li>
                                 </ul>
                             </div>
                         </div>
