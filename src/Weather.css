@@ -34,7 +34,7 @@ button:hover {
 }
 
 .form-enter {
-    display: flex;
+    /* display: flex; */
     justify-content: center;
 }
 
