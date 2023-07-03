@@ -52,7 +52,7 @@ button:hover {
     justify-content: center;
     gap: 40px;
     width: 50%;
-    align-items: end;
+    align-items: flex-end;
 }
 
 .tomorrow-wrapper {
