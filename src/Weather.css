@@ -52,6 +52,7 @@ button:hover {
     justify-content: center;
     gap: 40px;
     width: 50%;
+    align-items: end;
 }
 
 .tomorrow-wrapper {
@@ -139,6 +140,7 @@ button:hover {
     color: #395678;
     font-weight: 500;
     text-transform: capitalize;
+    margin-top: 7px;
 }
 
 .weather-values ul {
@@ -160,8 +162,15 @@ button:hover {
 
 .other-days {
     font-size: 14px;
-    color: #272e3e;
+    /* color: #272e3e; */
     font-weight: 600;
+    margin-bottom: 7px;
+    color: #395678;
+}
+
+.other-days .canvas {
+    color: #d85420;
+    margin: 10px 0;
 }
 
 .weather-forecast-temperatures {
@@ -191,4 +200,19 @@ button:hover {
 
 .text-message {
     font-size: 24px;
+}
+
+.WeatherForecast {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.weather-forecast-temperatures-min,
+.weather-forecast-temperatures-max {
+    color: #d85420;
+}
+
+.weather-forecast-temperatures-min {
+    opacity: 0.6;
+    margin-left: 5px;
 }
