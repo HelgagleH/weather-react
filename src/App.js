@@ -13,7 +13,7 @@ function App() {
         >
           Open-source code
         </a>
-        <span className="signature"> by Olha Dashchynska</span>
+        <span className="signature"> by 123</span>
       </div>
     </div>
   );
