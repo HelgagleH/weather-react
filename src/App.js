@@ -7,7 +7,7 @@ function App() {
       <Weather defaultCity="Kyiv" />
       <div className="bottom-link">
         <a
-          href="https://github.com/HelgagleH/weather-react"
+          href="https://github.com/"
           target="_blank"
           rel="noreferrer"
         >
